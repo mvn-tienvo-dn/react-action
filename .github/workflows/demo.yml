@@ -20,9 +20,9 @@ jobs:
       - name: setup run npm
         run: npm install
       - name: run eslint
-        run: npx eslint -f json ./
-#      - run: echo $errorJson
-#      - name: run build
-#        run: npm run build
+        run: errorJson=$(npx eslint -f json ./)
+      - run: echo $errorJson
+      - name: run build
+        run: npm run build
 
 
