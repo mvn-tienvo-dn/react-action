@@ -21,6 +21,8 @@ jobs:
         run: npm install
       - name: run eslint
         run: npm run lint -- --fix
+      - run: errorJson=$(npx eslint -f json ./)
+      - run: echo $errorJson
       - name: run build
         run: npm run build
 
