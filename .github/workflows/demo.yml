@@ -17,4 +17,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14.19.3
+      - name: setup run npm
+      - run: npm install
+      - run: npm run lint -- --fix
+      - run: npm run build
+
 
