@@ -21,7 +21,7 @@ jobs:
         run: npm install
       - name: run eslint
         run: echo "errorJson=$(npx eslint -f json ./)" >> $GITHUB_ENV
-      - run: echo $errorJson[0]
+      - run: echo "${errorJson[0]}"
 #      - name: run build
 #        run: npm run build
 
