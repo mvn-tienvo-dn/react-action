@@ -8,20 +8,20 @@ jobs:
     steps:
       - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
       - run: echo hello word, today is $TODAY
-  settup:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.4.2
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14.19.3
-      - name: setup run npm
-        run: npm install
-      - name: run eslint
-        run: echo "errorJson=$(npx eslint -f json ./)" >> $GITHUB_ENV
-      - run: echo "${errorJson[0]}"
+#  settup:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2.4.2
+#      - name: Setup node
+#        uses: actions/setup-node@v3
+#        with:
+#          node-version: 14.19.3
+#      - name: setup run npm
+#        run: npm install
+#      - name: run eslint
+#        run: echo "errorJson=$(npx eslint -f json ./)" >> $GITHUB_ENV
+#      - run: echo "${errorJson[0]}"
 #      - name: run build
 #        run: npm run build
 
