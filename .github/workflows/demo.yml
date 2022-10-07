@@ -18,8 +18,10 @@ jobs:
         with:
           node-version: 14.19.3
       - name: setup run npm
-      - run: npm install
-      - run: npm run lint -- --fix
-      - run: npm run build
+        run: npm install
+      - name: run eslint
+        run: npm run lint -- --fix
+      - name: run build
+        run: npm run build
 
 
