@@ -8,3 +8,13 @@ jobs:
     steps:
       - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
       - run: echo hello word, today is $TODAY
+  settup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.2
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.19.3
+
