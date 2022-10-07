@@ -21,6 +21,6 @@ module.exports = {
             }
         ],
       "react/react-in-jsx-scope": "off",
-      "no-console": 1
+      "no-console": 2
     }
 }
