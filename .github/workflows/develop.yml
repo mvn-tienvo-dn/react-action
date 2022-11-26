@@ -1,0 +1,14 @@
+name: github action
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    types: [opened, reopened]
+  workflow_dispatch:
+jobs:
+  test-develop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo hello word
+      - run: echo test run action when Checkout dev
