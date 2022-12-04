@@ -2,12 +2,15 @@ name: github action
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
+    types: [opened]
 jobs:
-  say-hello:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
-      - run: echo hello word, today is $TODAY
+  # say-hello:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+  #     - run: echo hello word, today is $TODAY
   settup:
     runs-on: ubuntu-latest
     steps:
